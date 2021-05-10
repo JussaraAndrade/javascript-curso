@@ -28,3 +28,19 @@ const celsius = fahrenheit.map(function(elem){
 const celsius = fahrenheit.map(elem => Math.round((elem - 32) * 5/9))
 
 //console.log(celsius)
+
+
+
+
+
+/* ================================================================================== 
+filter() 
+=====================================================================================*/
+
+const yetAnotherArray = [2, 3, 4, 5, 4, 12, 19, 7, 2, 5]
+
+const uniqueArray = yetAnotherArray.filter((elem, index, arr) => arr.indexOf(elem) === index)
+
+console.log(uniqueArray)
+
+
