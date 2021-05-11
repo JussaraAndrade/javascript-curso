@@ -41,6 +41,27 @@ const yetAnotherArray = [2, 3, 4, 5, 4, 12, 19, 7, 2, 5]
 
 const uniqueArray = yetAnotherArray.filter((elem, index, arr) => arr.indexOf(elem) === index)
 
-console.log(uniqueArray)
+//console.log(uniqueArray)
 
 
+
+
+
+/* ================================================================================== 
+reduce() 
+=====================================================================================*/
+
+// Array de objeto
+const rockets = [
+    { country: "Russia", launches: 32 },
+    { country: "US", launches: 23 },
+    { country: "China", launches: 16 },
+    { country: "Europa", launches: 7 },
+    { country: "India", launches: 4 },
+    { country: "Japan", launches: 3 }
+]
+
+// Descobrir o total do lançamento
+const totalLaunches = rockets.reduce( (prevVal, elem) => prevVal + elem.launches, 0)
+
+console.log(totalLaunches)
