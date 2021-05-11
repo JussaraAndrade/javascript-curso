@@ -64,4 +64,33 @@ const rockets = [
 // Descobrir o total do lançamento
 const totalLaunches = rockets.reduce( (prevVal, elem) => prevVal + elem.launches, 0)
 
-console.log(totalLaunches)
+//console.log(totalLaunches)
+
+
+/*  ================================================================================== 
+    every() 
+    =====================================================================================*/
+
+
+/*  Verificar se todos os elementos de um array são maiores que 10 
+    =====================================================================================*/
+
+const anotherArray = [ 12, 25, 28, 130, 44 ]
+
+const allAbove10 = anotherArray.every(elem => elem > 10)
+
+//console.log(allAbove10)
+
+/*  Verificar se todos são maiores de idade
+    =====================================================================================*/
+
+// Retorno fictício de uma api com alguns dados
+const tchurma = [
+    {id: 12, name: "Frederico", age: 8},
+    {id: 47, name: "Frederica", age: 7},
+    {id: 77, name: "Frederico", age: 48},
+    {id: 85, name: "Zenon", age: 52},
+]
+
+console.log(tchurma.every( p => p.age >= 18 ))
+
