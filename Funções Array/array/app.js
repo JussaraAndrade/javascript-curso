@@ -155,5 +155,19 @@ const fruits = [
 
 const foundFruit = fruits.find(fruit => fruit.name == "cereja")
 
-console.log(foundFruit)
+//console.log(foundFruit)
+
+/*  ================================================================================== 
+    includes() 
+    ==================================================================================*/
+
+const people = [
+   { id: 11, name: "Adamastor", age: 23, group: "editor" },
+   { id: 47, name: "Joana", age: 28, group: "user" },
+   { id: 85, name: "Mauricio", age: 34, group: "editor" },
+   { id: 97, name: "Lalau", age: 47, group: "admin" }
+]
+
+const filterredUsers = people.filter( p => p.name.includes( "J")) 
+console.log( filterredUsers )
 
