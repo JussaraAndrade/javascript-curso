@@ -38,14 +38,16 @@ class Produto {
             td_id.classList.add('center');
 
             let imgEdit = document.createElement('img');
-            imgEdit.src = 'img/editar.svg'
+            imgEdit.src = 'img/editar.svg';
 
             let imgDelete = document.createElement('img')
-            imgDelete.src = 'img/delete.svg'
+            imgDelete.src = 'img/delete.svg';
+            imgDelete.setAttribute("onclick", "produto.deletar("+ this.arrayProdutos[i].id +")");
 
             td_acoes.appendChild(imgEdit);
             td_acoes.appendChild(imgDelete);
-            // <td><img></td>
+            
+            console.log(this.arrayProdutos);
 
         }
     }
@@ -88,6 +90,18 @@ class Produto {
         document.getElementById('produto').value = '';
         document.getElementById('preco').value = '';
 
+    }
+
+    deletar(id){
+        let tbody = document.getElementById('tbody');
+
+        for(let i = 0; i < this.arrayProdutos.length; i++){
+            if(this.arrayProdutos[i].id == id){
+                this.arrayProdutos.splice(i, 1);
+                tbody.deleteRow(i);
+            }
+        }
+        console.log(this.arrayProdutos);
     }
 }
 
