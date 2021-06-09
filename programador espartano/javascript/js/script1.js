@@ -6,6 +6,7 @@ class Produto {
         //toda vez que ele chamar o produto ele tem o modelo alguns atributos definidos
         this.id = 1;
         this.arrayProdutos = [];
+        this.editId = null;
     }
 
     // Métodos (funções)
@@ -13,7 +14,12 @@ class Produto {
        let produto = this.lerDados();
 
        if(this.validaCampos(produto)){
-         this.adicionar(produto);
+           if(this.editId == null){
+            this.adicionar(produto);
+           }else{
+            this.atualizar(this.editId, produto);
+           }
+         
        }
 
        this.listaTabela();
@@ -39,8 +45,9 @@ class Produto {
 
             let imgEdit = document.createElement('img');
             imgEdit.src = 'img/editar.svg';
+            imgEdit.setAttribute("onclick", "produto.preparaEdicao("+ JSON.stringify(this.arrayProdutos[i]) +")");
 
-            let imgDelete = document.createElement('img')
+            let imgDelete = document.createElement('img');
             imgDelete.src = 'img/delete.svg';
             imgDelete.setAttribute("onclick", "produto.deletar("+ this.arrayProdutos[i].id +")");
 
@@ -53,8 +60,27 @@ class Produto {
     }
     
     adicionar(produto){
+        produto.preco = parseFloat(produto.preco)
         this.arrayProdutos.push(produto);
         this.id++;
+    }
+
+    atualizar(id, produto){
+        for (let i = 0; i < this.arrayProdutos.length; i++) {
+            if(this.arrayProdutos[i].id == id){
+                this.arrayProdutos[i].nomeProduto = produto.nomeProduto;
+                this.arrayProdutos[i].preco = produto.preco;
+            }
+        }
+    }
+
+    preparaEdicao(dados){
+        this.editId = dados.id;
+
+        document.getElementById('produto').value = dados.nomeProduto;
+        document.getElementById('preco').value = dados.preco;
+
+        document.getElementById('btn1').innerText = 'Atualizar';
     }
 
     lerDados(){
@@ -90,10 +116,14 @@ class Produto {
         document.getElementById('produto').value = '';
         document.getElementById('preco').value = '';
 
+        document.getElementById('btn1').innerText = 'Salvar';
+        this.editId = null;
+
     }
 
     deletar(id){
-        let tbody = document.getElementById('tbody');
+        if(confirm('Deseja realmente deletar o produto do ID ' +id)){
+            let tbody = document.getElementById('tbody');
 
         for(let i = 0; i < this.arrayProdutos.length; i++){
             if(this.arrayProdutos[i].id == id){
@@ -102,6 +132,9 @@ class Produto {
             }
         }
         console.log(this.arrayProdutos);
+
+        }
+        
     }
 }
 
