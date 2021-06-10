@@ -4,11 +4,13 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1 id="titulo">Seja bem vindo(a)</h1>
+    <img src="images/cachorro.jpg" data-animal="Cachorro" class="imagem"/><br>
 
-    <input type="text" id="campo">
-    
-    
+    <button onclick="trocarImagem('cachorro.jpg', 'Cachorro')">Cachorro</button>
+    <button onclick="trocarImagem('gato.jpg', 'Gato')" >Gato</button>
+
+    <button onclick="pegarAnimal()">Qual é o animal?</button>
+
     <script type="text/javascript" src="scripts.js"></script>
 </body>
 </html>
