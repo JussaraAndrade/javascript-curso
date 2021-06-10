@@ -1,12 +1,28 @@
-// quatro principais formas que mostra os dados para o usuário final
+let x = 10;
+let y = 15;
 
-// troca o texto para "Opa, tudo bem?"
-document.getElementById('titulo').innerHTML = "Opa, tudo bem?";
-// criando o próprio elemento
-document.write("Algum Texto");
+let total = x + y;
 
-// janela do navegador
-window.alert("Mensagem de exemplo.");
+console.log(total);
 
-// erros, mensagem etc...
-console.log("A mensagem que eu inserir aqui, aparecerá no console.");
+let nome = "Jussara";
+let idade = 27;
+console.log("Meu nome é " +nome +", tenho "+ idade+ " anos.");
+
+let total1 = nome+ " " +idade;
+console.log(total1);
+
+
+let nome1 = "Thomaz"; // STRING
+let sobrenome = "Henrique";
+
+let nomecompleto = nome1 + " " +sobrenome; // Concatena (juntar)
+
+console.log(nomecompleto);
+
+let x1 = "10"; // É diferente: let x1 = 10
+let y1 = "15"; // É diferente: let x2 = 15
+
+let total2 = x1 + y1;
+
+console.log(total2);
