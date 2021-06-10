@@ -1,17 +1,9 @@
-let verde = () => {
-    document.querySelector('#exemplo').classList.remove('vermelho');
-    document.querySelector('#exemplo').classList.remove('azul');
-    document.querySelector('#exemplo').classList.add('verde');
-}
-
-let vermelho = () => {
-    document.querySelector('#exemplo').classList.remove('verde');
-    document.querySelector('#exemplo').classList.remove('azul');
-    document.querySelector('#exemplo').classList.add('vermelho');
-}
-
-let azul = () => {
-    document.querySelector('#exemplo').classList.remove('vermelho');
-    document.querySelector('#exemplo').classList.remove('verde');
-    document.querySelector('#exemplo').classList.add('azul');
+let trocar = () => {
+    if(document.querySelector('button').classList.contains('preto')){
+        document.querySelector('button').classList.remove('preto');
+        document.querySelector('button').classList.add('verde');
+    } else {
+        document.querySelector('button').classList.remove('verde');
+        document.querySelector('button').classList.add('preto');
+    }
 }
