@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <head>
+    <meta charset="utf-8">
     <title>Página</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1 id="titulo">Seja bem vindo(a)</h1>
+    <h1 id="titulo" class="vermelho">Seja bem vindo(a)</h1>
 
-    <!-- <input onkeydown="digitou()" id="campo" type="text" name="usuario" value="Nome do usuário" /> -->
-    <!-- <input onkeyup="digitou()" id="campo" type="text" name="usuario" value="Nome do usuário" /> -->
-    <input onkeyup="digitou(event)" id="campo" type="text" name="usuario" value="Nome do usuário" />
+    <!-- <button onclick="azul()">Azul</button>
+    <button onclick="vermelho()">Vermelho</button>
+    <button onclick="verde()">Verde</button> -->
+
+    <div id="telefone">999999999</div>
+        
+    <button onclick="mostrarTelefone(this)">Mostrar Telefone</button>
     
   
     <script type="text/javascript" src="scripts.js"></script>
