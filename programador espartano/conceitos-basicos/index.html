@@ -6,16 +6,11 @@
 <body>
     <h1 id="titulo">Seja bem vindo(a)</h1>
 
-    <!-- <input id="campo" onmouseover="console.log('passou o mouse')" type="text" name="usuario" value="Nome do usuário" /> -->
-    <input id="campo" 
-        onclick="console.log('clicou')" 
-        onmouseover="console.log('passou o mouse')" 
-        onmouseout="console.log('tirou o mouse')" type="text" name="usuario" value="Nome do usuário" />
-
-    <!-- <button onclick="clicou()">Clique em mim</button> -->
-    <!-- <button onclick="document.getElementById('titulo').innerHTML= 'Texto 2'">Clique em mim</button> -->
-    <!-- <button onclick="this.innerHTML = 'Clicou'">Clique em mim</button> -->
- 
+    <!-- <input onkeydown="digitou()" id="campo" type="text" name="usuario" value="Nome do usuário" /> -->
+    <!-- <input onkeyup="digitou()" id="campo" type="text" name="usuario" value="Nome do usuário" /> -->
+    <input onkeyup="digitou(event)" id="campo" type="text" name="usuario" value="Nome do usuário" />
+    
+  
     <script type="text/javascript" src="scripts.js"></script>
 </body>
 </html>
