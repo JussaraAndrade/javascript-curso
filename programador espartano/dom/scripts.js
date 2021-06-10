@@ -1,9 +1,14 @@
-let trocar = () => {
-    if(document.querySelector('button').classList.contains('preto')){
-        document.querySelector('button').classList.remove('preto');
-        document.querySelector('button').classList.add('verde');
-    } else {
-        document.querySelector('button').classList.remove('verde');
-        document.querySelector('button').classList.add('preto');
-    }
-}
+var nome = "Jussara"; // STRING
+var idade = 27; // NUMBER
+var salvo = true; // BOOLEAN
+var cidade; // o tipo não foi definido. indefinido/undefined
+
+// saber o tipo da variável
+typeof nome
+
+var tipo = typeof idade;
+
+console.log(tipo);
+
+
+
