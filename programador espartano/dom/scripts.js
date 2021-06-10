@@ -1,13 +1,17 @@
-// identificar um elemento pelo id
-document.querySelector('#exemplo')
+let verde = () => {
+    document.querySelector('#exemplo').classList.remove('vermelho');
+    document.querySelector('#exemplo').classList.remove('azul');
+    document.querySelector('#exemplo').classList.add('verde');
+}
 
-//identificar o elemento pela classe 
-document.querySelector('.exemplo')
+let vermelho = () => {
+    document.querySelector('#exemplo').classList.remove('verde');
+    document.querySelector('#exemplo').classList.remove('azul');
+    document.querySelector('#exemplo').classList.add('vermelho');
+}
 
-// selecionar mais de um elemento
-document.querySelectorAll('.lista')
-
-document.querySelectorAll('.lista')[1].innerHTML = 'Alterado!';
-
-document.querySelector('button').innerHTML = 'Inscreva-se';
-
+let azul = () => {
+    document.querySelector('#exemplo').classList.remove('vermelho');
+    document.querySelector('#exemplo').classList.remove('verde');
+    document.querySelector('#exemplo').classList.add('azul');
+}
