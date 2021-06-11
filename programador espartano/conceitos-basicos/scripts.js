@@ -7,22 +7,40 @@
 */
 
 // Objeto - ele tem 3 propriedades (nome, modelo e peso)
-let carros = {
+let carro = {
     nome: 'Fiat',
     modelo: 'Uno',
     peso: '800kg',
+    ligado: false,
+    // armazenar funções
     ligar: function() {
+        this.ligado = true;
         console.log("VRUM VRUM!");
     },
     acelerar: function () {
-        console.log("Riiiiiiiihihi");
+        if(this.ligado == true){
+            console.log("Riiiiiiiihihi");
+        } else {
+            console.log(this.nome+ " " +this.modelo+ " não está ligado!");
+        }
     }
 };
 
 //console.log(carros['nome']);
 //console.log(carros.nome);
 
-console.log( carros.modelo );
+console.log("Modelo: " +carro.modelo );
 
-carros.ligar();
-carros.acelerar();
+carro.ligar();
+carro.acelerar();
+
+// array começa com [], objeto começa com {}
+let carros = [
+    {nome: 'Fiat', modelo: 'Palio'},
+    {nome: 'Fiat', modelo: 'Uno'},
+    {nome: 'Toyota', modelo: 'Corolla'},
+    {nome: 'Ferrari', modelo: 'Spider'}
+];
+
+// console.log(carros[2]['nome']);
+console.log(carros[2].nome);
