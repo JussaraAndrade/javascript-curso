@@ -1,25 +1,30 @@
-let azul = () => {
-    limpar();
-    document.getElementById("titulo").classList.add('azul');
-}
+// Array de lista
 
-let vermelho = () => {
-    limpar();
-    document.getElementById("titulo").classList.add('vermelho');
-}
+let carros1 = ['Palio', 'Uno', 'Corolla', 'Ferrari'];
 
-let verde = () => {
-    limpar();
-    document.getElementById("titulo").classList.add('verde');
-}
+let carros2 = new Array('Palio', 'Uno', 'Corolla', 'Ferrari');
 
-let limpar = () => {
-    document.getElementById("titulo").classList.remove("azul");
-    document.getElementById("titulo").classList.remove("vermelho");
-    document.getElementById("titulo").classList.remove("verde");
-}
+let carros3 = [
+    'Palio',   // 0
+    'Uno',     // 1
+    'Corolla', // 2
+    'Ferrari', // 3
+    // assuntos avançando
+    function() {
+        console.log('Testando 1, 2, 3...');
+    }
+];
 
-let mostrarTelefone = (elemento) => {
-    elemento.style.display = 'none';
-    document.getElementById('telefone').style.display = "block";
-}
+carros3[4]();
+
+let ingredientes = [
+    // Item 1
+    ['uva', 'pera', 'maça'],
+    // Item 2
+    ['arroz', 'macarrão']
+];
+
+// pegou o arroz 
+console.log(ingredientes[1][0]);
+
+
