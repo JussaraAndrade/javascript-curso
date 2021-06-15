@@ -6,11 +6,14 @@
     <title>Requisições assincronas</title>
 </head>
 <body>
+    <!-- opção de selecionar mais de um arquivo -->
+    <!-- <input type="file" multiple id="arquivo" /> -->
+    
+    <!-- seleciona apenas um arquivo por vez -->
+    <input type="file" id="arquivo" />
 
-   <button onclick="inserirPost()" >Inserir Post</button>
+    <button onclick="enviar()">Enviar</button>
 
-   <div id="posts"></div>
-
-    <script src="upload-arquivos.js"></script>
+    <script type="text/javascript" src="upload-arquivos.js"></script>
 </body>
 </html>
