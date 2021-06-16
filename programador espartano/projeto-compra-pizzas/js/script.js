@@ -34,10 +34,10 @@ pizzaJson.map((item, index) => {
 
         c('.pizzaInfo--qt').innerHTML = modalQt;
 
-        c('.pizzaWindowArea').style.opacity = 0;
+        c('.pizzaWindowArea').style.opacity = '0';
         c('.pizzaWindowArea').style.display = 'flex';
         setTimeout(() => {
-            c('.pizzaWindowArea').style.opacity = 1;
+            c('.pizzaWindowArea').style.opacity = '1';
         }, 200);
     });
 
@@ -46,9 +46,9 @@ pizzaJson.map((item, index) => {
 
 // Eventos do MODAL
 const closeModal = () => {
-    c('.pizzaWindowArea').style.opacity = 0;
+    c('.pizzaWindowArea').style.opacity = '0';
     setTimeout(() => {
-        c('.pizzaWindowArea').style.display = none;
+        c('.pizzaWindowArea').style.display = 'none';
     }, 500);
 
 }
