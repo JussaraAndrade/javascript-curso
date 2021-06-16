@@ -1,10 +1,9 @@
-// mapeameto - lista das pizzas
 const c = (el) => document.querySelector(el);
 const cs = (el) => document.querySelectorAll(el);
 
+// Listagem das pizzas
 pizzaJson.map((item, index) => {
     let pizzaItem = document.querySelector('.models .pizza-item').cloneNode(true);
-    
     
     // preencher as informações em pizzaitem
     pizzaItem.setAttribute('data-key', index); // chave do item especifico
@@ -12,6 +11,8 @@ pizzaJson.map((item, index) => {
     pizzaItem.querySelector('.pizza-item--price').innerHTML = `R$ ${item.price.toFixed(2)}`;
     pizzaItem.querySelector('.pizza-item--name').innerHTML = item.name;
     pizzaItem.querySelector('.pizza-item--desc').innerHTML = item.description;
+
+    // eventos de cliques
     pizzaItem.querySelector('a').addEventListener('click', (e) => {
         e.preventDefault();
         let key = e.target.closest('.pizza-item').getAttribute('data-key');
@@ -37,6 +38,20 @@ pizzaJson.map((item, index) => {
 
     c('.pizza-area').append( pizzaItem );
 });
+
+// Eventos do MODAL
+const closeModal = () => {
+    c('.pizzaWindowArea').style.opacity = 0;
+    setTimeout(() => {
+        c('.pizzaWindowArea').style.display = none;
+    }, 500);
+
+}
+
+cs('.pizzaInfo--cancelButton, .pizzaInfo--cancelMobileButton').forEach((item) => {
+    item.addEventListener('click', closeModal);
+});
+
 
 
 
